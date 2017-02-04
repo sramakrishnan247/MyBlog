@@ -1,0 +1,37 @@
+<% include ./partials/header %>
+<div class="ui main text container">
+<div class="ui huge header">My Blog</div>
+	<div class="ui top attached segment">
+		<div class="ui divided items">
+	<% for(var i=0;i < blogs.length;i++){ %>
+		<div class="ui divided items ">
+	<div class="item">
+			<div class="image">
+				<img src="<%= blogs[i].image %>">
+			</div>
+			
+		<div class="content">
+				<a class="header"><h2><%= blogs[i].title %></h2></a>
+			
+			<div class="description">
+				<p> <%= blogs[i].body.substring(0,100); %>... </p>
+			</div>
+
+			<div class="extra">
+				<a class="ui button orange basic" href="/blogs/<%=blogs[i]._id %>">Read more</a>
+      		</div>
+		</div>
+	</div>
+</div>
+
+
+
+<% } %>
+		
+		</div>
+		
+	</div>
+</div>
+
+
+<% include ./partials/footer %>
