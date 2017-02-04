@@ -3,7 +3,7 @@ var app = express()
 var mongoose = require("mongoose")
 var bodyParser = require("body-parser")
 var methodOverride = require("method-override")
-var port = 3000;
+var port = process.env.PORT || 8080;
 // title 
 // image 
 // body
