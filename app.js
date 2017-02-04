@@ -3,13 +3,15 @@ var app = express()
 var mongoose = require("mongoose")
 var bodyParser = require("body-parser")
 var methodOverride = require("method-override")
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 // title 
 // image 
 // body
 // date
 
-mongoose.connect("mongodb://localhost/blogapp")
+// mongoose.connect("mongodb://localhost/blogapp")
+mongoose.connect("mongodb://test:test@ds139989.mlab.com:39989/myblog");
+
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
